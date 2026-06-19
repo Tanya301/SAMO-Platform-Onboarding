@@ -46,4 +46,4 @@ samo.team is on **GitLab**; the four tools are on **GitHub** (easy to mix up).
 | samohost | deploy/preview infra, DNS, triggers | github.com/NikolayS/samohost |
 | samo.team | the platform | gitlab.com/NikolayS/samo.team |
 
-Current client: **game changers** — https://game-changers.samo.team/
+Current client: _set per engagement_

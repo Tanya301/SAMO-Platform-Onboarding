@@ -59,8 +59,8 @@ Don't report "done" off green CI. "Tagged" isn't "shipped" — walk the deployed
 
 | Env | Pattern | Example |
 | --- | --- | --- |
-| Production | `<app>.samo.team` | game-changers.samo.team |
-| Preview | `<app>-<branch>.samo.cat` | game-changers-`<branch>`.samo.cat |
+| Production | `<app>.samo.team` | acme.samo.team |
+| Preview | `<app>-<branch>.samo.cat` | acme-`<branch>`.samo.cat |
 | SAMO internal | `samo.green` | — |
 
 - Previews are `<app>-<branch>.samo.cat`, one per PR, auto-created by samohost (DBLab thin-clones).
@@ -81,13 +81,11 @@ Confirm before starting; request what's missing:
 - [ ] Docker / local DB — only when the client's tests need it
 - [ ] Your client's prod URL, repo, and issue tracker
 
-## Your assignment
+## Getting started
 
-- Client: **game changers**
-- Prod: https://game-changers.samo.team/
-- Preview: `game-changers-<branch>.samo.cat`
+First message to the client: send the [client welcome message](client-welcome-message.md) — short, plain language, no tech terms. Then find the repo and open issues, read only your client's context, and run the workflow above.
 
-First message to the client: send the [client welcome message](client-welcome-message.md) — short, plain language, no tech terms. Then find the repo and open issues, read only this project's context, and run the workflow above.
+Your actual assignment — your client, repo, and prod/preview URLs — is provided to you separately at provisioning; read that alongside this doc.
 
 ## Proposed (not built — don't tell a client these exist)
 

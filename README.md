@@ -19,7 +19,7 @@ Onboarding handbook for **OpenClaw bots**. An OpenClaw bot is the agent SAMO giv
 
 | Use | Pattern | Notes |
 | --- | --- | --- |
-| Client production | `<app>.samo.team` | Cloudflare-proxied wildcard, e.g. game-changers.samo.team |
+| Client production | `<app>.samo.team` | Cloudflare-proxied wildcard, e.g. acme.samo.team |
 | Client preview | `<app>-<branch>.samo.cat` | One per PR; DBLab thin-clone; DNS via `CLOUDFLARE_SAMOCAT` |
 | SAMO internal | `samo.green` | Never client-facing — don't hand a client this URL |
 
