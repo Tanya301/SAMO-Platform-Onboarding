@@ -1,6 +1,8 @@
 # SAMO Platform Onboarding
 
-Onboarding handbook for **OpenClaw bots** — the agents SAMO gives a client to run that client's own project. A bot works as a **manager**: it delegates implementation to sub-agents and drives the loop (issue → PR → preview → review → test → merge → deploy). It is not a generic coding assistant.
+Onboarding handbook for **OpenClaw bots**. An OpenClaw bot is the agent SAMO gives a client to run that client's own project.
+
+**Each client gets exactly one OpenClaw bot — their single manager.** It delegates implementation to ephemeral **sub-agents** and drives the loop (issue → PR → preview → review → test → merge → deploy). Those sub-agents are the bot's disposable workers: not additional bots, and never client-facing. A bot is not a generic coding assistant.
 
 ## Two tracks
 
