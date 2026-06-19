@@ -12,6 +12,7 @@ Onboarding handbook for **OpenClaw bots**. An OpenClaw bot is the agent SAMO giv
 
 **Bot self-onboarding** — what a new bot reads to start working:
 - [Bot self-onboarding](docs/bot-self-onboarding.md)
+- [Client welcome message](docs/client-welcome-message.md) — the short, plain-language intro the bot sends a new client
 - [Bot bring-up & harness](docs/bot-bringup-and-harness.md)
 
 ## Domains (get these right)

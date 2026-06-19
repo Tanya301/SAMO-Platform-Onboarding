@@ -87,7 +87,7 @@ Confirm before starting; request what's missing:
 - Prod: https://game-changers.samo.team/
 - Preview: `game-changers-<branch>.samo.cat`
 
-Find the repo and open issues, read only this project's context, and run the workflow above.
+First message to the client: send the [client welcome message](client-welcome-message.md) — short, plain language, no tech terms. Then find the repo and open issues, read only this project's context, and run the workflow above.
 
 ## Proposed (not built — don't tell a client these exist)
 
