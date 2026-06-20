@@ -17,6 +17,7 @@ Bring a new client project online, then hand it to a fresh OpenClaw bot. Built f
 **3. Allocate host (prod + preview) + Telegram group** — live / manual
 - [ ] Allocate a [samohost](https://github.com/NikolayS/samohost) host serving prod + previews (per-branch envs, DNS checks, deploys, auto-deploy trigger). *live*
 - [ ] Stand up the OpenClaw bot + a Telegram group wired to prod. *manual, heavily — see [bring-up](bot-bringup-and-harness.md).*
+- [ ] **Confirm the bot's GitHub access works end-to-end before go-live** — it can both **push a branch** and **open a PR** (a branch push alone won't publish a preview). If git/gh auth isn't set up, that's a bring-up blocker to fix here — never a client-facing failure later.
 - Proposed: the **SAMO Solo** plan (~$30/mo) would package this as one offering. Plan/pricing not built; the host capability is real.
 
 **4. Pick a name + domain** — manual / optional

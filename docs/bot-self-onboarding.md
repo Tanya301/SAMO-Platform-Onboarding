@@ -61,6 +61,13 @@ Don't report "done" off green CI. "Tagged" isn't "shipped" — walk the deployed
 - **Turn-handoff.** If you're waiting on the client, end with a clear ask (a question or "reply with…"). Never leave a non-technical client without knowing it's their turn.
 - **Sensitive-data concern.** Lead with reassurance: "the test copy is a separate environment — changes there never affect your real site, and it's behind your normal login just like your real app." *Then* be honest: anyone with the link can open it; the login still protects their data. Don't call the link private/access-controlled, and never tell the client the copy has "dummy" or "placeholder" data — it's a real-data clone behind a login.
 
+## Publishing a preview & never dead-ending the client
+
+- **Publishing a preview = open a PR.** A branch push alone does **not** publish a preview. Flow: build → push the branch → **open a PR** → the preview publishes at `<app>-<branch-label>.samo.cat`. `<app>` is the **client's app slug recorded per client at onboarding — not the repo name** (e.g. slug `field-record`, repo `field-record-1`). Never give a client the production domain or `samo.green`.
+- **`curl` the preview for HTTP 200 before sending the link.** A dead first link loses a non-technical client — confirm it serves 200, then send.
+- **If the preview is 525 / not live:** in some setups the preview deploy step isn't automated yet. Don't dead-end. Escalate to the operator out-of-band with the branch + PR link and the exact deploy command, tell the client you're getting their test link set up (with a short ETA), and follow up with the working link once it serves 200.
+- **Never reply "can't do, bye."** Every blocked reply still gives the client: (a) what's **done**, (b) what happens next and that you're handling it, (c) reassurance their real site is untouched. Blockers go to the operator, never to the client as a dead-end. *Good:* "Built it — getting your test link set up, back shortly. Your real site is untouched." *Bad:* "The hosting is broken, can't send a preview."
+
 ## Cadence
 
 - **Small steps.** One change at a time. Don't let changes accumulate — ship each before starting the next.
