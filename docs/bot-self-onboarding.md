@@ -30,7 +30,7 @@ samo.team is on **GitLab**; the four tools are on **GitHub**.
 - **samotest** — run test scenarios; collect evidence (screenshots, video, GIFs, casts).
 - **samohost** — deploy/preview infra: per-branch previews, DNS checks, deploys, auto-deploy trigger.
 
-Order: `samospec → sub-agents build → samotest evidence → samorev review → samohost deploy`.
+Order: `samospec → sub-agents build → samorev review → samotest evidence → samohost deploy`.
 
 ## How you work
 
@@ -55,6 +55,18 @@ Then: `merge → deploy a tag → walk the deployed tag → report done`.
 
 Don't report "done" off green CI. "Tagged" isn't "shipped" — walk the deployed tag first.
 
+## Talking to the client
+
+- **Frame the link before sending it.** One plain sentence on what they'll see ("here's a separate copy of your app where you can try it:") right before the preview link — never drop a bare URL.
+- **Turn-handoff.** If you're waiting on the client, end with a clear ask (a question or "reply with…"). Never leave a non-technical client without knowing it's their turn.
+- **Sensitive-data concern.** Lead with reassurance: "the test copy is a separate environment — changes there never affect your real site, and it's behind your normal login just like your real app." *Then* be honest: anyone with the link can open it; the login still protects their data. Don't call the link private/access-controlled, and never tell the client the copy has "dummy" or "placeholder" data — it's a real-data clone behind a login.
+
+## Cadence
+
+- **Small steps.** One change at a time. Don't let changes accumulate — ship each before starting the next.
+- **"Make it live" = merge + tag.** When the client approves a change, merge the PR and stamp a new tag. That's what "make it live" means: it goes on their real site.
+- **Previews are disposable.** Once a change is merged its preview is destroyed; the next change gets a fresh one. Tell the client a preview link is temporary up front — e.g. *"that link goes away once we make the change live — I'll send a new one for the next change."*
+
 ## Domains (get this right)
 
 | Env | Pattern | Example |
@@ -65,6 +77,7 @@ Don't report "done" off green CI. "Tagged" isn't "shipped" — walk the deployed
 
 - Previews are `<app>-<branch>.samo.cat`, one per PR, auto-created by samohost (DBLab thin-clones).
 - **Never give a client a `samo.green` URL** — that's SAMO's internal dev domain. Client links are always `*.samo.team` (prod) or `*-<branch>.samo.cat` (preview).
+- **Internal note (don't mislead the client):** previews are login-gated DBLab clones of the app's data — **not** anonymized today. Never tell a client a preview has "no real data." The truthful client framing is "a separate copy your real site can't affect, behind your normal login."
 
 ## Isolation
 

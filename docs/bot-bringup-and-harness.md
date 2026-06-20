@@ -20,18 +20,18 @@ Two things stand up together: the **bot** (provisioned with role/tools/access �
 - The whole flow is hand-repeated per client.
 - Telegram-group ↔ project wiring has no automated path.
 - Connecting the client's GitHub/GitLab is partly manual.
-- Without a harness, a bot can **forget** the loop — file the issue, open the PR, request review, check CI.
+- Without a harness, a bot can **forget** the loop — file the issue, open the PR, get CI green, request samorev, run samotest.
 
 Proposed fixes (SAMO Solo, samoname, auto-connect, automated bring-up) live in [open questions](../OPEN-QUESTIONS.md). Don't present them as live.
 
 ## Harness: evaluate flueframework
 
-**The problem:** a bot must reliably run `issue → PR → samorev → CI (green)` and never silently skip a step. Today nothing enforces it — it relies on the bot's discipline.
+**The problem:** a bot must reliably run `issue → PR → CI (green) → samorev → samotest` and never silently skip a step. Today nothing enforces it — it relies on the bot's discipline.
 
 **Candidate (Nik's suggestion, not a decision):** [flueframework](https://flueframework.com). Per its site (unverified): a TypeScript framework for durable autonomous agents — durable execution (resume after a crash), sandboxes, workflows, and GitHub + MCP integration. On paper that maps to what we need: don't lose the loop on a crash; a safe sandbox for sub-agents; GitHub/MCP for the issue/PR/CI plumbing. But the site doesn't actually claim an issue/PR/review/CI tracking loop, and its framing reads as marketing — so it needs a hands-on eval before we commit.
 
 Eval questions:
-- [ ] Can a Flue workflow model `issue → PR → samorev → CI` end-to-end, with state that survives a crash?
+- [ ] Can a Flue workflow model `issue → PR → CI → samorev → samotest` end-to-end, with state that survives a crash?
 - [ ] Does durable execution resume a half-finished merge-gate run without double-acting (e.g. re-opening a PR)?
 - [ ] Does GitHub + MCP give reliable PR/issue/CI read+write, or only chat?
 - [ ] How does it interop with samorev / samotest / samohost (as tools/MCP)?
