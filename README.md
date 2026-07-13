@@ -7,13 +7,14 @@ Onboarding handbook for **OpenClaw bots**. An OpenClaw bot is the agent SAMO giv
 ## Two tracks
 
 **Operator** — bring a new client project online:
+- [Copy/paste Telegram client kickoff](docs/client-welcome-message.md) — the
+  operator's send-ready first message and the bot's first-preview handoff
 - [Client onboarding checklist](docs/client-onboarding-checklist.md)
 - [Bot bring-up & harness](docs/bot-bringup-and-harness.md) — standing up the bot + Telegram group (ops)
 - [Open questions](OPEN-QUESTIONS.md) — automation gaps still to decide
 
 **Bot self-onboarding** — what a new bot reads to start working:
 - [Bot self-onboarding](docs/bot-self-onboarding.md)
-- [Client welcome message](docs/client-welcome-message.md) — the short, plain-language intro the bot sends a new client
 
 ## Domains (get these right)
 

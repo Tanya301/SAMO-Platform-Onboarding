@@ -1,25 +1,105 @@
-# Client Welcome Message
+# Messages to Start a Client in Telegram
 
-The first message an OpenClaw bot sends a client (e.g. in the Telegram group) once it's set up. Most clients aren't technical — keep it short and plain. Swap in the client's app name; otherwise send close to verbatim.
+Choose one kickoff message. Replace `[client name]`, `[app name]`, `[@bot]`, and
+`[approver]`, but leave the final fill-in sentence for the client to complete.
+Send it after the client and bot are in the group. `[approver]` must be the
+person recorded for release approval.
 
----
-
-Hi! 👋 I'm your SAMO bot — like having your own product team on call. Tell me what you want your app to do in plain words and I'll build it. No tech knowledge needed.
-
-**How we'll work:**
-- You ask for a change in everyday words.
-- I build it and send you a link to a **preview environment** — a separate, safe copy of your app where you can try it. Nothing you do there changes your real site; your real site stays exactly as it is until you say go.
-- Like it? Say the word and I'll **make it live** — put it on your real site. Want it different? Just tell me.
-
-**Try it now:** reply with one small change — even just "change the background color." I'll send you a link to see it. That's the whole loop.
+## Existing App
 
 ---
 
-Notes for the bot:
-- Personalize with the client's app name. Check the onboarding checklist for whether this is a brand-new app or an existing one, and tailor examples to what the client actually has.
-- **Lead with plain language.** You MAY use "preview environment" (the body introduces it with a plain gloss); don't pile on other jargon.
-- **Turn-handoff:** if you're waiting on the client, end your message with a clear ask (a question or "reply with…"). Never go silent — a non-technical client won't know it's their turn.
-- **Frame the link before sending it:** one plain sentence on what they'll see ("here's a separate copy of your app where you can try it:") right before the link.
-- **Who can see it (answer honestly, ~verbatim):** "Anyone who has the link can open it — it's not private or locked. They'll land on your normal login, and your login still protects your data. Best not to post the link publicly." Do NOT claim the link is private/access-controlled. Do NOT claim the copy contains no real data (the preview is a login-gated copy of the real app — it can hold real records). Avoid the bare word "unlisted"; say "not posted anywhere public."
-- **Gloss "live" on first use:** "live means it goes on your real site for your customers."
-- Don't over-promise; only offer real things. One short message.
+Hi [client name] — welcome to SAMO 👋
+
+[@bot] is your SAMO manager for [app name]. Tell it the result you want in
+everyday words — no technical brief or software knowledge needed.
+
+Here's how it works:
+
+1. You tell [@bot] the result you want.
+2. SAMO builds it and sends a preview — a temporary version to try.
+3. You check the changed part and ask for adjustments if needed.
+
+SAMO checks and reviews each change before it can go into the live app — the
+version your customers use. Only [approver] can approve a change by replying:
+“Make this change live.”
+
+Please don't send passwords, payment details, health information, or private
+customer records in this group.
+
+Start by replying with one small result:
+
+“On [page], change [what is there now] to [what I want]. It should work on
+[phone, computer, or both].”
+
+---
+
+## New Idea
+
+---
+
+Hi [client name] — welcome to SAMO 👋
+
+[@bot] is your SAMO manager for [app name]. Tell it what you want to build in
+everyday words — no technical brief or software knowledge needed.
+
+Here's how it works:
+
+1. You tell [@bot] the first useful result.
+2. SAMO builds it and sends a preview — a temporary version to try.
+3. You try it and tell us what to adjust.
+
+SAMO checks and reviews each change before it can go into the live app — the
+version your customers will use. Only [approver] can approve a change by
+replying: “Make this change live.”
+
+Please don't send passwords, payment details, health information, or private
+customer records in this group.
+
+Start by replying with the first useful result:
+
+“I want to build [what] for [who]. First, they need to be able to [do what].”
+
+---
+
+## First Preview Handoff
+
+Send this later, after the preview opens successfully and its access, data, and
+connected services have been checked. Replace every bracketed field.
+
+---
+
+Your first preview is ready. It's a temporary version of [app name] where you
+can check [what changed]:
+
+[preview link]
+
+Please don't share this link publicly.
+
+Before you test it:
+
+- Access: [anyone with the link can view it / anyone with the link can reach
+  the sign-in page; an existing login is required]
+- Records: [test data only / a separate copy of live records]
+- Safe to test: [specific actions confirmed safe]
+- Do not test: [specific actions that are real or not yet confirmed safe]
+
+Changes to preview records do not change the live app's database. However,
+payments, emails, messages, bookings, and other connected actions can still be
+real. Follow the lists above.
+
+Please don't send passwords or private customer information in Telegram
+messages or screenshots.
+
+Please check [specific page and behavior] on [phone, computer, or both]. Does
+it match what you expected?
+
+This link stops working after we make the change live or stop the work.
+
+---
+
+If no connected action is confirmed safe, use “Safe to test: viewing the
+changed page only.” Never send a bare preview link or leave a bracketed choice
+in the client message. Praise such as “looks good” is feedback, not release
+approval; only the recorded approver's explicit “Make this change live” is
+approval for the named change.

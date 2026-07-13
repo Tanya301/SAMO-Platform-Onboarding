@@ -57,9 +57,15 @@ Don't report "done" off green CI. "Tagged" isn't "shipped" — walk the deployed
 
 ## Talking to the client
 
+- **Use the canonical handoff.** The operator sends the first
+  [Telegram kickoff](client-welcome-message.md). Acknowledge it and respond to
+  the client's first result; don't repeat the whole introduction.
 - **Frame the link before sending it.** One plain sentence on what they'll see ("here's a separate copy of your app where you can try it:") right before the preview link — never drop a bare URL.
 - **Turn-handoff.** If you're waiting on the client, end with a clear ask (a question or "reply with…"). Never leave a non-technical client without knowing it's their turn.
-- **Sensitive-data concern.** Lead with reassurance: "the test copy is a separate environment — changes there never affect your real site, and it's behind your normal login just like your real app." *Then* be honest: anyone with the link can open it; the login still protects their data. Don't call the link private/access-controlled, and never tell the client the copy has "dummy" or "placeholder" data — it's a real-data clone behind a login.
+- **Use the recorded safety profile.** Fill the canonical preview handoff's
+  Access, Records, Safe to test, and Do not test lines with checked facts. The
+  preview database is separate, but connected services may be real and records
+  may be copied from production. Treat unknown actions as unsafe to test.
 
 ## Publishing a preview & never dead-ending the client
 
@@ -72,6 +78,9 @@ Don't report "done" off green CI. "Tagged" isn't "shipped" — walk the deployed
 
 - **Small steps.** One change at a time. Don't let changes accumulate — ship each before starting the next.
 - **"Make it live" = merge + tag.** When the client approves a change, merge the PR and stamp a new tag. That's what "make it live" means: it goes on their real site.
+- **Approval must be explicit.** Only the recorded approver can authorize the
+  currently named change. “Looks good,” an emoji reaction, or general praise is
+  feedback; ask for an explicit “make it live” before merging.
 - **Previews are disposable.** Once a change is merged its preview is destroyed; the next change gets a fresh one. Tell the client a preview link is temporary up front — e.g. *"that link goes away once we make the change live — I'll send a new one for the next change."*
 
 ## Domains (get this right)
@@ -84,7 +93,11 @@ Don't report "done" off green CI. "Tagged" isn't "shipped" — walk the deployed
 
 - Previews are `<app>-<branch>.samo.cat`, one per PR, auto-created by samohost (DBLab thin-clones).
 - **Never give a client a `samo.green` URL** — that's SAMO's internal dev domain. Client links are always `*.samo.team` (prod) or `*-<branch>.samo.cat` (preview).
-- **Internal note (don't mislead the client):** previews are login-gated DBLab clones of the app's data — **not** anonymized today. Never tell a client a preview has "no real data." The truthful client framing is "a separate copy your real site can't affect, behind your normal login."
+- **Internal note (don't mislead the client):** previews are login-gated DBLab
+  clones of the app's data — **not** anonymized today. Database writes in the
+  preview do not write to the production database; that does not isolate
+  external services. Never collapse those two claims into “the preview cannot
+  affect anything real.”
 
 ## Isolation
 
@@ -103,7 +116,10 @@ Confirm before starting; request what's missing:
 
 ## Getting started
 
-First message to the client: send the [client welcome message](client-welcome-message.md) — short, plain language, no tech terms. Then find the repo and open issues, read only your client's context, and run the workflow above.
+The operator sends the first
+[Telegram kickoff](client-welcome-message.md). Reply to the client's first
+result or ask one concrete starting question. Then find the repo and open
+issues, read only your client's context, and run the workflow above.
 
 Your actual assignment — your client, repo, and prod/preview URLs — is provided to you separately at provisioning; read that alongside this doc.
 

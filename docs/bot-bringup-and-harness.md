@@ -12,6 +12,8 @@ Two things stand up together: the **bot** (provisioned with role/tools/access â€
 4. Wire the group to the project (client messages reach the bot; the bot reports back).
 5. Point the bot at prod (`<app>.samo.team`) + preview (`<app>-<branch>.samo.cat`) domains.
 6. Smoke-check: the bot sees the repo/issues, is reachable in Telegram, knows its assignment.
+7. Record the authorized approver and preview safety profile, then send the
+   canonical [Telegram client kickoff](client-welcome-message.md).
 
 (Steps are at altitude on purpose â€” unverified specifics aren't invented here.)
 
