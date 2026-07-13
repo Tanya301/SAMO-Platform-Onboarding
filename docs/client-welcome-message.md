@@ -2,14 +2,14 @@
 
 Before sending:
 
-1. Replace `[client name]`, `[app name]`, `[@bot]`, and `[approver]`.
-   `[approver]` must be the person recorded for release approval.
+1. Replace `[client name]`, `[app name]` or `[project name]`, `[@bot]`, and
+   `[approver]`. `[approver]` must be the person recorded for release approval.
 2. Record **Personal information** as `yes`, `no`, or `not sure`. This
    classification is required before kickoff. Treat `not sure` as `yes`.
 3. For `yes` or `not sure`, insert this sentence immediately before the
-   paragraph beginning “Reply with”. For `no`, omit it:
+   paragraph beginning “Start with”. For `no`, omit it:
 
-> Please don’t send personal records, passwords, payment details, or screenshots containing personal information in Telegram.
+> For examples in Telegram, use made-up names and details.
 
 Choose the relevant kickoff after the client and bot are in the group.
 
@@ -19,27 +19,27 @@ Choose the relevant kickoff after the client and bot are in the group.
 
 Hi [client name] — welcome to SAMO 👋
 
-[@bot] manages [app name]. Use plain words—no technical brief needed.
+[@bot] builds [app name].
 
-1. Name the real business result.
-2. The bot asks the next question it needs, builds the change, and sends a
-   preview link to inspect the proposed change before it is published to the
-   live app.
-3. The bot identifies safe actions. Try only those actions, then tell the bot
-   what to change.
+Start with one small change. Name the page. Say what happens now and what you
+want instead.
 
-The proposed change is published to the live app only after SAMO’s required
-checks and review pass and [approver] replies: “Make this change live.”
+The bot asks questions and builds the change.
 
-Reply with the page or task, who uses it, what happens now, what result you
-want, and whether it matters on phone, computer, or both.
+When it is ready, the bot sends a preview link. A preview is a separate version
+of the project where you can review and try changes before they go live. The
+link message explains what to try.
 
-Example: “Booking page: people call about reservation changes. I want phone
-requests so staff handle fewer calls.”
+Tell the bot what to adjust. It updates the preview.
 
-Prefer guidance? Name a small first change, not a number: one element’s wording
-or color; a dark-theme treatment for one section; the first landing-page
-section; or login-screen wording and layout without changing sign-in.
+SAMO must finish its checks. [approver] must then say, “Make this change live.”
+
+For a guided start, send one command:
+
+- “Guide me through changing the wording or color.”
+- “Guide me through adding a dark theme to one section.”
+- “Guide me through building one landing-page section.”
+- “Guide me through improving the login layout.”
 
 ---
 
@@ -49,25 +49,26 @@ section; or login-screen wording and layout without changing sign-in.
 
 Hi [client name] — welcome to SAMO 👋
 
-[@bot] manages [app name]. Use plain words—no technical brief needed.
+[@bot] builds [project name].
 
-1. Name the first real business result for people who will use it.
-2. The bot asks the next question it needs, builds it, and sends a preview link
-   to inspect the proposed change before it is published to the live app.
-3. The bot identifies safe actions. Try only those actions, then tell the bot
-   what to change.
+Start with one small task. Say who needs it and what they need to do.
 
-The proposed change is published to the live app only after SAMO’s required
-checks and review pass and [approver] replies: “Make this change live.”
+The bot asks questions and builds the first part.
 
-Reply with the business, who will use it, their first task, and why it matters.
+When it is ready, the bot sends a preview link. A preview is a separate version
+of the project where you can review and try changes before they go live. The
+link message explains what to try.
 
-Example: “Farm workers record finished jobs by phone so I can see each day’s
-work.”
+Tell the bot what to adjust. It updates the preview.
 
-Prefer guidance? Name a small first change, not a number: one element’s wording
-or color; a dark-theme treatment for one section; the first landing-page
-section; or login-screen wording and layout without changing sign-in.
+SAMO must finish its checks. [approver] must then say, “Make this project live.”
+
+For a guided start, send one command:
+
+- “Guide me through changing the wording or color.”
+- “Guide me through adding a dark theme to one section.”
+- “Guide me through building one landing-page section.”
+- “Guide me through improving the login layout.”
 
 ---
 
