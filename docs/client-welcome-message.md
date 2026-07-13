@@ -79,7 +79,7 @@ connected services have been checked. Replace every bracketed field.
 
 ---
 
-Your first preview is ready. It's a temporary version of [app name] where you
+Your first preview is ready. It is a separate version of [app name] where you
 can check [what changed]:
 
 [preview link]
