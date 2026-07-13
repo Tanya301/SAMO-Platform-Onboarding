@@ -7,7 +7,7 @@ Bring a new client project online, then hand it to a fresh OpenClaw bot. Built f
 **1. Name + one-line description** — manual
 - [ ] Agree the project name and a one-line description. Seeds the spec later.
 - [ ] Agree and record the **app URL slug** (e.g. `field-record`, **not** the repo name `field-record-1`). It becomes `<slug>.samo.team` (prod) and `<slug>-<branch>.samo.cat` (previews); every downstream step and the [bring-up](bot-bringup-and-harness.md) doc need it.
-- [ ] Capture the client's **starting point**: a brand-new app vs. an existing app with logins/real users — so the operator sends the right kickoff variant.
+- [ ] Capture the client's **starting point**: a brand-new app vs. an existing app with logins/real users — so onboarding and preview checks match the starting state.
 - [ ] Agree and record the person or role authorized to say **“make it live.”**
   The Telegram kickoff names that approver; the bot must not infer authority
   from group membership.
@@ -28,9 +28,9 @@ Bring a new client project online, then hand it to a fresh OpenClaw bot. Built f
   and which connected services are isolated, real, or unknown. Treat every
   unknown service as real until verified. The bot rechecks this before each
   preview handoff.
-- [ ] Send the canonical [Telegram client kickoff](client-welcome-message.md),
-  using the client's relevant variant. Confirm the bot answers the
-  client's first result or asks one clear starting question.
+- [ ] Send the canonical [Telegram client kickoff](client-welcome-message.md).
+  Confirm the bot answers the client's first result or asks one clear starting
+  question.
 - Proposed: the **SAMO Solo** plan (~$30/mo) would package this as one offering. Plan/pricing not built; the host capability is real.
 
 **4. Pick a name + domain** — manual / optional

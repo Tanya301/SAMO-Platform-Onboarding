@@ -2,8 +2,8 @@
 
 Before sending:
 
-1. Replace `[client name]`, `[app name]` or `[project name]`, `[@bot]`, and
-   `[approver]`. `[approver]` must be the person recorded for release approval.
+1. Replace `[client name]`, `[app name]`, `[@bot]`, and `[approver]`.
+   `[approver]` must be the person recorded for release approval.
 2. Record **Personal information** as `yes`, `no`, or `not sure`. This
    classification is required before kickoff. Treat `not sure` as `yes`.
 3. For `yes` or `not sure`, insert this sentence immediately before the
@@ -11,9 +11,9 @@ Before sending:
 
 > For examples in Telegram, use made-up names and details.
 
-Choose the relevant kickoff after the client and bot are in the group.
+Send the canonical kickoff below after the client and bot are in the group.
 
-## Existing App
+## Existing App Kickoff
 
 ---
 
@@ -33,35 +33,6 @@ link message explains what to try.
 Tell the bot what to adjust. It updates the preview.
 
 SAMO must finish its checks. [approver] must then say, “Make this change live.”
-
-For a guided start, send one command:
-
-- “Guide me through changing the wording or color.”
-- “Guide me through adding a dark theme to one section.”
-- “Guide me through building one landing-page section.”
-- “Guide me through improving the login layout.”
-
----
-
-## New Project
-
----
-
-Hi [client name] — welcome to SAMO 👋
-
-[@bot] builds [project name].
-
-Start with one small task. Say who needs it and what they need to do.
-
-The bot asks questions and builds the first part.
-
-When it is ready, the bot sends a preview link. A preview is a separate version
-of the project where you can review and try changes before they go live. The
-link message explains what to try.
-
-Tell the bot what to adjust. It updates the preview.
-
-SAMO must finish its checks. [approver] must then say, “Make this project live.”
 
 For a guided start, send one command:
 
