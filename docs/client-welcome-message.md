@@ -1,9 +1,17 @@
 # Messages to Start a Client in Telegram
 
-Choose one kickoff message. Replace `[client name]`, `[app name]`, `[@bot]`, and
-`[approver]`, but leave the final fill-in sentence for the client to complete.
-Send it after the client and bot are in the group. `[approver]` must be the
-person recorded for release approval.
+Before sending:
+
+1. Replace `[client name]`, `[app name]`, `[@bot]`, and `[approver]`.
+   `[approver]` must be the person recorded for release approval.
+2. Record **Personal information** as `yes`, `no`, or `not sure`. This
+   classification is required before kickoff. Treat `not sure` as `yes`.
+3. For `yes` or `not sure`, insert this sentence immediately before the
+   paragraph beginning “Reply with”. For `no`, omit it:
+
+> Please don’t send personal records, passwords, payment details, or screenshots containing personal information in Telegram.
+
+Choose the relevant kickoff after the client and bot are in the group.
 
 ## Existing App
 
@@ -11,54 +19,55 @@ person recorded for release approval.
 
 Hi [client name] — welcome to SAMO 👋
 
-[@bot] is your SAMO manager for [app name]. Tell it the result you want in
-everyday words — no technical brief or software knowledge needed.
+[@bot] manages [app name]. Use plain words—no technical brief needed.
 
-Here's how it works:
+1. Name the real business result.
+2. The bot asks the next question it needs, builds the change, and sends a
+   preview link to inspect the proposed change before it is published to the
+   live app.
+3. The bot identifies safe actions. Try only those actions, then tell the bot
+   what to change.
 
-1. You tell [@bot] the result you want.
-2. SAMO builds it and sends a preview — a temporary version to try.
-3. You check the changed part and ask for adjustments if needed.
+The proposed change is published to the live app only after SAMO’s required
+checks and review pass and [approver] replies: “Make this change live.”
 
-SAMO checks and reviews each change before it can go into the live app — the
-version your customers use. Only [approver] can approve a change by replying:
-“Make this change live.”
+Reply with the page or task, who uses it, what happens now, what result you
+want, and whether it matters on phone, computer, or both.
 
-Please don't send passwords, payment details, health information, or private
-customer records in this group.
+Example: “Booking page: people call about reservation changes. I want phone
+requests so staff handle fewer calls.”
 
-Start by replying with one small result:
-
-“On [page], change [what is there now] to [what I want]. It should work on
-[phone, computer, or both].”
+Prefer guidance? Name a small first change, not a number: one element’s wording
+or color; a dark-theme treatment for one section; the first landing-page
+section; or login-screen wording and layout without changing sign-in.
 
 ---
 
-## New Idea
+## New Project
 
 ---
 
 Hi [client name] — welcome to SAMO 👋
 
-[@bot] is your SAMO manager for [app name]. Tell it what you want to build in
-everyday words — no technical brief or software knowledge needed.
+[@bot] manages [app name]. Use plain words—no technical brief needed.
 
-Here's how it works:
+1. Name the first real business result for people who will use it.
+2. The bot asks the next question it needs, builds it, and sends a preview link
+   to inspect the proposed change before it is published to the live app.
+3. The bot identifies safe actions. Try only those actions, then tell the bot
+   what to change.
 
-1. You tell [@bot] the first useful result.
-2. SAMO builds it and sends a preview — a temporary version to try.
-3. You try it and tell us what to adjust.
+The proposed change is published to the live app only after SAMO’s required
+checks and review pass and [approver] replies: “Make this change live.”
 
-SAMO checks and reviews each change before it can go into the live app — the
-version your customers will use. Only [approver] can approve a change by
-replying: “Make this change live.”
+Reply with the business, who will use it, their first task, and why it matters.
 
-Please don't send passwords, payment details, health information, or private
-customer records in this group.
+Example: “Farm workers record finished jobs by phone so I can see each day’s
+work.”
 
-Start by replying with the first useful result:
-
-“I want to build [what] for [who]. First, they need to be able to [do what].”
+Prefer guidance? Name a small first change, not a number: one element’s wording
+or color; a dark-theme treatment for one section; the first landing-page
+section; or login-screen wording and layout without changing sign-in.
 
 ---
 

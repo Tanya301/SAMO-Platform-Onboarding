@@ -11,6 +11,8 @@ Bring a new client project online, then hand it to a fresh OpenClaw bot. Built f
 - [ ] Agree and record the person or role authorized to say **“make it live.”**
   The Telegram kickoff names that approver; the bot must not infer authority
   from group membership.
+- [ ] Classify **Personal information** as `yes`, `no`, or `not sure` before
+  kickoff. Treat `not sure` as `yes` when choosing the kickoff warning.
 
 **2. Connect the code host** — manual
 - [ ] Connect the client's GitHub/GitLab so the bot can open issues, push branches, open PRs. Mechanism: the client invites the SAMO machine account as a write collaborator, or SAMO provisions a deploy key + bot-account membership.
@@ -67,6 +69,7 @@ samo.team is on **GitLab**; the four tools are on **GitHub** (easy to mix up).
 - **Repo:** _`<host>/<owner>/<repo>`_
 - **Starting state:** _brand-new app · or existing app with logins/real users_
 - **Authorized approver:** _person or role_
+- **Personal information:** _yes · no · not sure (treat not sure as yes)_
 - **Preview access:** _public to link · or sign-in required_
 - **Preview records:** _test-only · or copied live records_
 - **Connected services safe to test:** _verified list; “none” is valid_
