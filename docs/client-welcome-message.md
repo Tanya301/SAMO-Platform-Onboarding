@@ -1,8 +1,6 @@
 # Messages to Start a Client in Telegram
 
-Before sending, replace `[client name]`, `[app name]`, and `[@bot]`.
-
-Send the canonical kickoff below after the client and bot are in the group.
+Replace `[client name]`, `[app name]`, and `[@bot]` before sending.
 
 ## Existing App Kickoff
 
@@ -31,42 +29,26 @@ For a guided start, send one command:
 
 ## First Preview Handoff
 
-Send this later, after the preview opens successfully and its access, data, and
-connected services have been checked. Replace every bracketed field.
+Replace every bracketed field and send only after the link opens successfully.
 
 ---
 
-Your first preview is ready. It is a separate version of [app name] where you
-can check [what changed]:
+Your preview is ready. It is a separate version of [app name] where you can
+check [what changed]:
 
 [preview link]
 
-Please don't share this link publicly.
+- Access: [public / sign-in required]
+- Records: [test-only / a separate copy of live records]
+- Safe to test: [verified actions]
+- Avoid: [real or unknown connected actions]
 
-Before you test it:
-
-- Access: [anyone with the link can view it / anyone with the link can reach
-  the sign-in page; an existing login is required]
-- Records: [test data only / a separate copy of live records]
-- Safe to test: [specific actions confirmed safe]
-- Do not test: [specific actions that are real or not yet confirmed safe]
-
-Changes to preview records do not change the live app's database. However,
-payments, emails, messages, bookings, and other connected actions can still be
-real. Follow the lists above.
-
-Please don't send passwords or private customer information in Telegram
-messages or screenshots.
-
-Please check [specific page and behavior] on [phone, computer, or both]. Does
-it match what you expected?
-
-This link stops working after we make the change live or stop the work.
+Please check [specific page and behavior] on [phone, computer, or both]. Does it
+match what you expected?
 
 ---
 
-If no connected action is confirmed safe, use “Safe to test: viewing the
-changed page only.” Never send a bare preview link or leave a bracketed choice
-in the client message. Any person in the project Telegram group can approve the
-current preview. “Looks good,” “go ahead,” or “make it live” are all enough; ask
-again only when the change or intent is unclear.
+Changes to preview records do not change the production database, but connected
+actions such as payments, email, messages, or bookings may still be real. Any
+person in the project Telegram group can approve the preview; no exact phrase is
+required.
