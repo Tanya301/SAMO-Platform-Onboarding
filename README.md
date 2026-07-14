@@ -1,26 +1,43 @@
-# SAMO Platform Onboarding
+# SAMO Client-Agent Handbook
 
-Onboarding handbook for **OpenClaw bots**. An OpenClaw bot is the agent SAMO gives a client to run that client's own project.
+Short handbook for the OpenClaw bot that manages a client's project and the
+operator who brings it online.
 
-**Each client gets exactly one OpenClaw bot — their single manager.** It delegates implementation to ephemeral **sub-agents** and drives the loop (issue → PR → preview → review → test → merge → deploy). Those sub-agents are the bot's disposable workers: not additional bots, and never client-facing. A bot is not a generic coding assistant.
+Each client gets one bot. Think of it as the project's CTO: it knows what is
+happening technically, but does not write the code itself. It understands the
+client's goal, delegates implementation, and runs the work from issue to preview
+to production.
 
-## Two tracks
+## Onboard a bot
 
-**Operator** — bring a new client project online:
-- [Client onboarding checklist](docs/client-onboarding-checklist.md)
-- [Bot bring-up & harness](docs/bot-bringup-and-harness.md) — standing up the bot + Telegram group (ops)
-- [Open questions](OPEN-QUESTIONS.md) — automation gaps still to decide
+1. Give the bot this handbook and a completed
+   [local assignment](docs/agent-assignment-template.md). Keep the completed
+   assignment in private bot memory; never commit it to a client repo.
+2. The bot reads:
+   - [Development principles](PRINCIPLES.md)
+   - [Bot self-onboarding](docs/bot-self-onboarding.md)
+   - its local assignment
+   - the client repo's `AGENTS.md`, `CLAUDE.md`, `README`, specs, and current work
+3. The bot sends the operator a short readiness note with its project, access,
+   preview safety facts, and blockers.
+4. For an existing app, the operator sends the
+   [Telegram kickoff](docs/client-welcome-message.md). A brand-new app needs a
+   project-specific kickoff and bootstrap guide in its assignment.
 
-**Bot self-onboarding** — what a new bot reads to start working:
-- [Bot self-onboarding](docs/bot-self-onboarding.md)
-- [Client welcome message](docs/client-welcome-message.md) — the short, plain-language intro the bot sends a new client
+## Operator pages
 
-## Domains (get these right)
+- [Local agent assignment template](docs/agent-assignment-template.md)
+- [Bot and Telegram bring-up](docs/bot-bringup-and-harness.md)
+- [Client Telegram welcome message](docs/client-welcome-message.md)
+- [Open questions](OPEN-QUESTIONS.md) — future automation, not current behavior
 
-| Use | Pattern | Notes |
-| --- | --- | --- |
-| Client production | `<app>.samo.team` | Cloudflare-proxied wildcard, e.g. acme.samo.team |
-| Client preview | `<app>-<branch>.samo.cat` | One per PR; DBLab thin-clone; DNS via `CLOUDFLARE_SAMOCAT` |
-| SAMO internal | `samo.green` | Never client-facing — don't hand a client this URL |
+## Domains
 
-**Live** = works today (status tag — distinct from the client-facing *make it live*, which means deploy to the real site). **Proposed** = idea, not built — never shown to a client as real.
+| Use | Pattern |
+| --- | --- |
+| Production | `<app>.samo.team` |
+| Preview | `<app>-<branch>.samo.cat` |
+| SAMO internal | `samo.green` — never client-facing |
+
+If generic handbook text conflicts with the completed assignment, the checked
+project facts in the assignment win.
