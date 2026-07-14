@@ -1,15 +1,6 @@
 # Messages to Start a Client in Telegram
 
-Before sending:
-
-1. Replace `[client name]`, `[app name]`, `[@bot]`, and `[approver]`.
-   `[approver]` must be the person recorded for release approval.
-2. Record **Personal information** as `yes`, `no`, or `not sure`. This
-   classification is required before kickoff. Treat `not sure` as `yes`.
-3. For `yes` or `not sure`, insert this sentence immediately before the
-   paragraph beginning “Start with”. For `no`, omit it:
-
-> For examples in Telegram, use made-up names and details.
+Before sending, replace `[client name]`, `[app name]`, and `[@bot]`.
 
 Send the canonical kickoff below after the client and bot are in the group.
 
@@ -17,29 +8,24 @@ Send the canonical kickoff below after the client and bot are in the group.
 
 ---
 
-Hi [client name] — welcome to SAMO 👋
+Hi [client name] — welcome to SAMO :wave:
 
 [@bot] builds [app name].
 
-Start with one small change. Name the page. Say what happens now and what you
-want instead.
+Start with one small change. Look at your website and decide what you want to change (different color? new page? new functionality?).
 
 The bot asks questions and builds the change.
 
-When it is ready, the bot sends a preview link. A preview is a separate version
-of the project where you can review and try changes before they go live. The
-link message explains what to try.
+When it is ready, the bot sends a preview link. A preview is a separate version of the project where you can review and try changes before they go live.
 
-Tell the bot what to adjust. It updates the preview.
-
-SAMO must finish its checks. [approver] must then say, “Make this change live.”
+Tell the bot what to adjust. It updates the preview. Once you are happy with the changes, say “Make this change live.”
 
 For a guided start, send one command:
 
-- “Guide me through changing the wording or color.”
-- “Guide me through adding a dark theme to one section.”
-- “Guide me through building one landing-page section.”
-- “Guide me through improving the login layout.”
+  - “Guide me through changing the wording or color.”
+  - “Guide me through adding a dark theme to one section.”
+  - “Guide me through building one landing-page section.”
+  - “Guide me through improving the login layout.”
 
 ---
 

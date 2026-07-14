@@ -9,10 +9,10 @@ Bring a new client project online, then hand it to a fresh OpenClaw bot. Built f
 - [ ] Agree and record the **app URL slug** (e.g. `field-record`, **not** the repo name `field-record-1`). It becomes `<slug>.samo.team` (prod) and `<slug>-<branch>.samo.cat` (previews); every downstream step and the [bring-up](bot-bringup-and-harness.md) doc need it.
 - [ ] Capture the client's **starting point**: a brand-new app vs. an existing app with logins/real users — so onboarding and preview checks match the starting state.
 - [ ] Agree and record the person or role authorized to say **“make it live.”**
-  The Telegram kickoff names that approver; the bot must not infer authority
-  from group membership.
-- [ ] Classify **Personal information** as `yes`, `no`, or `not sure` before
-  kickoff. Treat `not sure` as `yes` when choosing the kickoff warning.
+  The bot must not infer authority from group membership.
+- [ ] Classify **Personal information** as `yes`, `no`, or `not sure` before the
+  first preview handoff. Treat `not sure` as `yes` when preparing its access,
+  records, and testing instructions.
 
 **2. Connect the code host** — manual
 - [ ] Connect the client's GitHub/GitLab so the bot can open issues, push branches, open PRs. Mechanism: the client invites the SAMO machine account as a write collaborator, or SAMO provisions a deploy key + bot-account membership.
