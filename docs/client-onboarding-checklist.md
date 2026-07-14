@@ -8,8 +8,6 @@ Bring a new client project online, then hand it to a fresh OpenClaw bot. Built f
 - [ ] Agree the project name and a one-line description. Seeds the spec later.
 - [ ] Agree and record the **app URL slug** (e.g. `field-record`, **not** the repo name `field-record-1`). It becomes `<slug>.samo.team` (prod) and `<slug>-<branch>.samo.cat` (previews); every downstream step and the [bring-up](bot-bringup-and-harness.md) doc need it.
 - [ ] Capture the client's **starting point**: a brand-new app vs. an existing app with logins/real users — so onboarding and preview checks match the starting state.
-- [ ] Agree and record the person or role authorized to say **“make it live.”**
-  The bot must not infer authority from group membership.
 - [ ] Classify **Personal information** as `yes`, `no`, or `not sure` before the
   first preview handoff. Treat `not sure` as `yes` when preparing its access,
   records, and testing instructions.
@@ -22,15 +20,20 @@ Bring a new client project online, then hand it to a fresh OpenClaw bot. Built f
 **3. Allocate host (prod + preview) + Telegram group** — live / manual
 - [ ] Allocate a [samohost](https://github.com/NikolayS/samohost) host serving prod + previews (per-branch envs, DNS checks, deploys, auto-deploy trigger). *live*
 - [ ] Stand up the OpenClaw bot + a Telegram group wired to prod. *manual, heavily — see [bring-up](bot-bringup-and-harness.md).*
-- [ ] **Confirm the bot's GitHub access works end-to-end before go-live** — it can both **push a branch** and **open a PR** (a branch push alone won't publish a preview). If git/gh auth isn't set up, that's a bring-up blocker to fix here — never a client-facing failure later.
+- [ ] **Confirm the bot's code-host access works end-to-end before go-live** —
+  it can both **push a branch** and **open a PR/MR** (a branch push alone won't
+  publish a preview). If git or provider auth isn't set up, fix it here — never
+  turn it into a client-facing failure later.
 - [ ] Record the project's initial **preview safety profile**: whether access is
   public or sign-in-gated, whether records are test-only or copied from live,
   and which connected services are isolated, real, or unknown. Treat every
   unknown service as real until verified. The bot rechecks this before each
   preview handoff.
-- [ ] Send the canonical [Telegram client kickoff](client-welcome-message.md).
-  Confirm the bot answers the client's first result or asks one clear starting
-  question.
+- [ ] Send the appropriate client kickoff. Use the canonical
+  [Telegram kickoff](client-welcome-message.md) when there is already a site to
+  inspect. For a brand-new app, record a project-specific kickoff and bootstrap
+  guide in the agent assignment instead. Confirm the bot answers the client's
+  first request or asks one clear starting question.
 - Proposed: the **SAMO Solo** plan (~$30/mo) would package this as one offering. Plan/pricing not built; the host capability is real.
 
 **4. Pick a name + domain** — manual / optional
@@ -45,10 +48,19 @@ Bring a new client project online, then hand it to a fresh OpenClaw bot. Built f
 
 issue → PR → preview on `<app>-<branch>.samo.cat`. Near done, all three before merge:
 - [ ] PR-head CI **green**
-- [ ] [samorev](https://github.com/Tanya301/samorev) returns **PASS**
-- [ ] [samotest](https://github.com/Tanya301/samotest) walk evidence for any **UI** change
+- [ ] [samorev](https://github.com/Tanya301/samorev) is complete on the current
+      head: deterministic CLI gate **PASS** plus actual code analysis. The CLI
+      gate alone checks CI and draft state; it does not review the code. Follow
+      the [bot-operation runbook](https://github.com/Tanya301/samorev/blob/main/docs/bot-operation.md).
+- [ ] [samotest](https://github.com/Tanya301/samotest) evidence for any **UI**
+      change is uploaded and its [review gate](https://github.com/Tanya301/samotest/blob/main/docs/samorev-integration.md)
+      passes against the current PR/MR head SHA
 
-Then the lifecycle is explicit: approved change → merge → trigger auto-deploys from `origin/main` → new tag → redeploy → **walk the deployed tag** before calling it done → that change's preview is torn down → the next change gets a fresh preview link.
+Then the lifecycle is explicit: approved change → merge → publish through the
+configured production channel (branch-tracked or tag-gated) → verify the
+deployed SHA/version → **walk the safe changed production flow** before calling it
+done → that change's preview is torn down → the next change gets a fresh preview
+link. A merge or release tag alone is not proof of deployment.
 
 ## Tools
 
@@ -64,11 +76,14 @@ samo.team is on **GitLab**; the four tools are on **GitHub** (easy to mix up).
 
 ## This engagement (fill in)
 
+Copy these facts into the
+[agent assignment template](agent-assignment-template.md); this checklist alone
+is not the bot's assignment.
+
 - **App slug:** _e.g. `field-record`_
 - **Prod URL:** _`<slug>.samo.team`_
 - **Repo:** _`<host>/<owner>/<repo>`_
 - **Starting state:** _brand-new app · or existing app with logins/real users_
-- **Authorized approver:** _person or role_
 - **Personal information:** _yes · no · not sure (treat not sure as yes)_
 - **Preview access:** _public to link · or sign-in required_
 - **Preview records:** _test-only · or copied live records_

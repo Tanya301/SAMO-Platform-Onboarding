@@ -67,6 +67,6 @@ This link stops working after we make the change live or stop the work.
 
 If no connected action is confirmed safe, use “Safe to test: viewing the
 changed page only.” Never send a bare preview link or leave a bracketed choice
-in the client message. Praise such as “looks good” is feedback, not release
-approval; only the recorded approver's explicit “Make this change live” is
-approval for the named change.
+in the client message. Any person in the project Telegram group can approve the
+current preview. “Looks good,” “go ahead,” or “make it live” are all enough; ask
+again only when the change or intent is unclear.

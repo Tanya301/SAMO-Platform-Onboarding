@@ -6,14 +6,20 @@ Standing up an OpenClaw bot + its Telegram group is **manual today**. This is wh
 
 Two things stand up together: the **bot** (provisioned with role/tools/access — see [self-onboarding](bot-self-onboarding.md)) and a **Telegram group** (where the client talks to it). There's no one-button flow — an operator does this by hand:
 
-1. Provision the bot for the client project + give it its onboarding context.
-2. Confirm access: GitHub for the client repo, plus any in-scope infra (Cloudflare/host).
+1. Provision the bot for the client project + give it this handbook and a
+   completed [agent assignment](agent-assignment-template.md).
+2. Confirm access to the client's code host, plus any in-scope infra
+   (Cloudflare/host).
 3. Create the Telegram group and add the bot.
 4. Wire the group to the project (client messages reach the bot; the bot reports back).
-5. Point the bot at prod (`<app>.samo.team`) + preview (`<app>-<branch>.samo.cat`) domains.
-6. Smoke-check: the bot sees the repo/issues, is reachable in Telegram, knows its assignment.
-7. Record the authorized approver and preview safety profile, then send the
-   canonical [Telegram client kickoff](client-welcome-message.md).
+5. Point the bot at prod (`<app>.samo.team`) + preview
+   (`<app>-<branch>.samo.cat`) domains, the configured deploy paths, and the
+   live production identity proof.
+6. Smoke-check: the bot sees the repo/issues, is reachable in Telegram, and
+   returns the readiness note required by the handbook.
+7. Record the preview safety profile, then send the assigned kickoff: the
+   canonical [existing-app message](client-welcome-message.md), or the
+   project-specific greenfield message from the assignment.
 
 (Steps are at altitude on purpose — unverified specifics aren't invented here.)
 
