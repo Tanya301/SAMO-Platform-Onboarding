@@ -69,4 +69,10 @@ flow through the project's safe verification path before reporting it done.
 For a bug, reproduce the reported symptom on the currently deployed version
 before claiming a fix. Record the reproduction and the post-fix proof so the PR
 shows that the root cause, not a nearby symptom, changed.
+
+### 11. Show testing evidence
+
+When applicable, attach evidence people can inspect. UI changes should include
+screenshots or screencasts of the tested flow, not only a written claim that it
+works.
 <!-- SAMO-DEV-PRINCIPLES:END -->

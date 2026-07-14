@@ -3,9 +3,10 @@
 Short handbook for the OpenClaw bot that manages a client's project and the
 operator who brings it online.
 
-Each client gets one bot. The bot acts as the manager: it understands the
-client's goal, delegates implementation to sub-agents, and runs the work from
-issue to preview to production.
+Each client gets one bot. Think of it as the project's CTO: it knows what is
+happening technically, but does not write the code itself. It understands the
+client's goal, delegates implementation, and runs the work from issue to preview
+to production.
 
 ## Onboard a bot
 
@@ -25,10 +26,9 @@ issue to preview to production.
 
 ## Operator pages
 
-- [Client onboarding checklist](docs/client-onboarding-checklist.md)
 - [Local agent assignment template](docs/agent-assignment-template.md)
 - [Bot and Telegram bring-up](docs/bot-bringup-and-harness.md)
-- [Client Telegram messages](docs/client-welcome-message.md)
+- [Client Telegram welcome message](docs/client-welcome-message.md)
 - [Open questions](OPEN-QUESTIONS.md) — future automation, not current behavior
 
 ## Domains

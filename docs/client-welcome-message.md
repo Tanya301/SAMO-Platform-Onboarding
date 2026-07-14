@@ -1,8 +1,6 @@
-# Messages to Start a Client in Telegram
+# Telegram Welcome Message
 
 Replace `[client name]`, `[app name]`, and `[@bot]` before sending.
-
-## Existing App Kickoff
 
 ---
 
@@ -26,29 +24,3 @@ For a guided start, send one command:
   - “Guide me through improving the login layout.”
 
 ---
-
-## First Preview Handoff
-
-Replace every bracketed field and send only after the link opens successfully.
-
----
-
-Your preview is ready. It is a separate version of [app name] where you can
-check [what changed]:
-
-[preview link]
-
-- Access: [public / sign-in required]
-- Records: [test-only / a separate copy of live records]
-- Safe to test: [verified actions]
-- Avoid: [real or unknown connected actions]
-
-Please check [specific page and behavior] on [phone, computer, or both]. Does it
-match what you expected?
-
----
-
-Changes to preview records do not change the production database, but connected
-actions such as payments, email, messages, or bookings may still be real. Any
-person in the project Telegram group can approve the preview; no exact phrase is
-required.
